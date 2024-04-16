@@ -1,0 +1,30 @@
+.scroll-to-bottom {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  transform: rotate(180deg); /* Rotate the arrow to point downwards */
+  border: 1px solid var(--color-primary);
+}
+
+.scroll-to-bottom:hover {
+  background-color: #555;
+}
+
+.scroll-to-bottom span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--color-primary);
+  border-right: 2px solid var(--color-primary);
+  transform: rotate(-45deg); /* Adjust the rotation to point downwards */
+}

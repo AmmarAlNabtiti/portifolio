@@ -1,0 +1,130 @@
+.contact__container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+}
+
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.contact__option {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  -ms-border-radius: 1.2rem;
+  -o-border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.contact__option:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+.contact__option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+.contact__icon-option {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  background-color: transparent;
+  border: 2px solid var(--color-bg-variant);
+  resize: none;
+  font-size: 1rem;
+  font-family: "poppins";
+  color: white;
+}
+
+/*================== MEDIA QUERIES============== */
+
+/* MEDIUMS */
+
+@media screen and (max-width: 1024px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* SMALL */
+
+@media screen and (max-width: 600px) {
+  .contact__container {
+    width: var(--container-width-sm);
+  }
+}
+
+/* box successfully */
+
+.contact__container {
+  position: relative;
+}
+
+.submission-success {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4db5ffb5;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.submission-success.hide {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
