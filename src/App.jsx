@@ -1,6 +1,12 @@
 import './App.css';
-import { Header, About, Experience, Services, Portfolio, Testimonial, Contact, Footer } from "./Sections/index";
-import { Nav } from "./Components/index";
+import {
+  Header,
+  Experience,
+  Portfolio,
+  Contact,
+  Footer,
+} from './Sections/index';
+import { Nav } from './Components/index';
 function App() {
   return (
     <div className="App">
